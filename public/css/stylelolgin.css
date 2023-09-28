@@ -1,0 +1,158 @@
+/* Definir um tamanho de fonte padrão e adicionar margem e preenchimento para todo o documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a8dadc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Definir as unidades de medição como rem para garantir que o tamanho da fonte seja escalável */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Adicionar uma borda e fundo padrão a todos os botões e botões de envio */
+  button,
+  input[type="submit"] {
+    border: none;
+    background-color: #1d3557;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Alterar a cor de fundo do botão de envio quando o cursor passar sobre ele */
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #a8dadc;
+  }
+  
+  /* Definir uma largura padrão e alinhar o conteúdo do formulário */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Definir a fonte e tamanho do texto de entrada e adicionar uma borda */
+  input[type="text"],
+  input[type="password"] {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Alterar a cor da borda e adicionar um sombreado ao campo de entrada quando estiver em foco */
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #a8dadc;
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Adicionar uma borda a um campo de entrada com um erro */
+  input[type="text"].error,
+  input[type="password"].error {
+    border-color: #f44336;
+  }
+  
+  /* Adicionar uma mensagem de erro abaixo do campo de entrada com um erro */
+  .error-message {
+    font-size: 14px;
+    color: #f44336;
+    margin-top: 5px;
+  }
+  
+  /* Adicionar uma mensagem de sucesso abaixo do botão de envio após o envio do formulário */
+  .success-message {
+    font-size: 14px;
+    color: #1d3557;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  
+  /* Estilo do botão */
+  .btn-round {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1d3557;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    transition: all .2s ease-in-out;
+  }
+  
+  /* Estilo do menu */
+  .menu {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    display: none;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+  }
+  
+  /* Estilo das opções do menu */
+  .menu-item {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .menu-item:hover {
+    background-color: #1d3557;
+    color: #fff;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 480px) {
+    /* Reduza o tamanho do formulário e aumente a fonte para telas menores */
+    form {
+      padding: 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

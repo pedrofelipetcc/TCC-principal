@@ -1,0 +1,350 @@
+/* CSS 1 */
+body {
+  background-color: #a8dadc;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #1d3557;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilo do botão */
+.btn-round {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #a8dadc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estilo do menu */
+.menu {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+/* Estilo das opções do menu */
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: #1d3557;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  /* Estilos para dispositivos com largura máxima de 600px */
+  .container {
+    max-width: none;
+  }
+}
+
+/* CSS 2 */
+body {
+  color: #333;
+}
+
+.container {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 24px;
+  color: #555;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1d3557;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #a8dadc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="password"] {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #a8dadc;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+}
+
+input[type="text"].error,
+input[type="password"].error {
+  border-color: #f44336;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #f44336;
+  margin-top: 5px;
+}
+
+.success-message {
+  font-size: 14px;
+  color: #1d3557;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+#recovery-form {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#recovery-form label, #recovery-form input, #recovery-form button {
+  margin-top: 10px;
+}
+
+
+/* new css*/
+
+
+body {
+    background-color: #a8dadc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #1d3557;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #999;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3e8e41;
+}
+
+#mensagem {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 3px;
+    color: #a94442;
+    display: none;
+}
+/*postagens css*/
+
+.artigo-container {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  overflow: hidden; /* Evita que conteúdo flutuante ultrapasse altura */
+}
+
+.imagem {
+  width: 25%;
+  padding: 10px;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: left; /* Alinha o título à esquerda */
+}
+
+.introducao {
+  font-size: 1rem;
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Adjust this margin as needed */
+}
+
+.search-input {
+  width: 300px; /* Adjust the width as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 0; /* Prevent the input from taking up extra space */
+}
+
