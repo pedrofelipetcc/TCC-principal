@@ -42,26 +42,23 @@
 
 
     <main role="main" class="container">
-    @foreach ($artigos as $artigo)
-        <div class="card mb-3" onclick="window.location.href = '{{ route('view', ['id' => $artigo->id]) }}';">
+    @foreach ($sujestoes as $sujestao)        
+    <div class="card mb-3" >
             <div class="row g-0">
                 <div class="col-md-4">
-                    <a href="{{ route('view', ['id' => $artigo->id]) }}">
-                        <img src="{{ $artigo->imagem_url }}" alt="Imagem do artigo" class="img-fluid">
-                    </a>
+                   
+                        <img src="{{ $sujestao->imagem_url }}" alt="Imagem da sujestao" class="img-fluid">
+                    
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $artigo->titulo }}</h5>
-                        <p class="card-text">{{ $artigo->introducao }}</p>
-                        <p class="card-text">
-                            <small class="text-muted">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                                    <path d="M6.5 1a.5.5 0 0 0-.5.5V5a.5.5 0 0 0 .5.5h.793l.854 1.276a2 2 0 0 1 .553.974l.5 3A1.5 1.5 0 0 1 8.293 12H7.5a.5.5 0 0 0-.5.5V15a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-2.5a.5.5 0 0 0-.5-.5h-.793l-.854-1.276a2 2 0 0 1-.553-.974l-.5-3A1.5 1.5 0 0 1 7.707 4H8.5a.5.5 0 0 0 .5-.5V1.5a.5.5 0 0 0-.5-.5h-1z"/>
-                                </svg>
-                                {{ $artigo->visualizacao }} views
-                            </small>
-                        </p>
+                        <h3 class="card-title">{{ $sujestao->titulo }}</h3>
+                        <p class="card-text">{{ $sujestao->introducao }}</p>
+                        <p class="card-text"> {{ $sujestao->conteudo }}  </p>
+                      
+                        <p class="card-text"> {{ $sujestao->autor }}  </p>
+
+                       
                     </div>
                 </div> 
             </div>

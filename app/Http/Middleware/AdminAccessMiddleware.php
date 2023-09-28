@@ -14,9 +14,10 @@ class AdminAccessMiddleware
             $user = Auth::user();
 
             // Verifique o email do usuário
-            if ($user->funcao != 'admin') {
+            if (auth()->user()->funcao != 'admin' && auth()->user()->funcao != 'editor') {
                 abort(403);
             }
+            
         }
         return $next($request);
         // Redirecione ou retorne um erro caso o usuário não tenha acesso

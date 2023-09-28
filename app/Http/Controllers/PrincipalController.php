@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Artigo;
 use App\Models\User;
+use App\Models\Sujestao;
+
 
 use Illuminate\Http\Request;
 
@@ -58,12 +60,18 @@ class PrincipalController extends Controller
         return view('sujestao');
     }
     
+   
+
     public function sujestaopostada()
     {
-        return view('sujestao.sujestaoPostada', compact('sujestao'));
+        // Consulta os registros da tabela Sujestao
+        $sujestoes = Sujestao::where('postado', 1)
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+        // Retorna a view 'sujestaoPostada' com os resultados
+        return view('sujestaoPostada', compact('sujestoes'));
     }
-
-
 
 
 

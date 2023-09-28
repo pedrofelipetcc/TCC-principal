@@ -10,6 +10,10 @@ class Sujestao extends Model
     use HasFactory;
     
     protected $table= 'sujestao';
+    protected $fillable = [
+        'postado', // Adicione 'postado' aqui se ele não estiver presente
+        // outros atributos do modelo
+    ];
 
 
 }

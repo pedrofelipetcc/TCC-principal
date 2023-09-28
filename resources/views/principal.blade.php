@@ -65,7 +65,8 @@
   @endauth
       <div class="menu-item" onclick="window.location.href = '{{ route('gremio') }}';">Gremio Estudantil</div>
       <div class="menu-item" onclick="window.location.href = '{{ route('sujestao.sujestao') }}';">Deixe sua Sugestão</div>	
-      
+      <div class="menu-item" onclick="window.location.href = '{{ route('sujestaoPostada') }}';"> Sugestões Postadas</div>	
+
 
     </div>
   </nav>

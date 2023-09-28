@@ -1,3 +1,11 @@
+@extends('layouts.app')
+
+
+@section('content')
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -72,3 +80,6 @@
         <!-- Core theme JS-->
         <link  rel="stylesheet" href="public/assets/js/artigo.js">      </body>
 </html>
+
+
+@endsection

@@ -18,7 +18,8 @@
     
 </head>
 <body>
-   
+<form method="post">
+@csrf
 <div class="container">
     <div class="atributo">
         <strong>Título:</strong>
@@ -41,6 +42,12 @@
         <div>{{ $sujestoes->emailautor }}</div>
     </div>
 </div>
+
+
+    
+    <button type="submit" class="btn btn-danger">Postar</button>
+    </form>
+    
 @endsection
 </body>
 </html>

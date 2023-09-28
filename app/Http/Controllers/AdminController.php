@@ -115,6 +115,21 @@ public function edit($id)
 }
 
 
+
+
+public function postararsujestao($id)
+{
+    $artigo = Artigo::find($id);
+
+    if ($artigo) {
+        $artigo->update(['postado' => 1]);
+        return redirect()->back()->with('success', 'Artigo marcado como  postado com sucesso.');
+    }
+
+    return redirect()->back()->with('error', 'Artigo não encontrado.');
+}
+
+
 public function atualizar(Request $request, $id)
 {
     $artigo = Artigo::find($id);

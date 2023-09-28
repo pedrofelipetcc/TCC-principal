@@ -26,7 +26,6 @@ Route::get('/view/{id}', [PrincipalController::class, 'view'])->name('view');
 
 Route::get('/gremio', [PrincipalController::class, 'gremio']) ->name('gremio');
 
-Route::get('/sujestoes-postadas',               [PrincipalController::class, 'sujestaopostada']) ->name('sujestao.sujestaoPostada');
 
 
 Route::get('/sujestao',               [SujestaoController::class, 'sujestao']) ->name('sujestao.sujestao');
@@ -78,6 +77,12 @@ Route::get('/admin', [AdminController::class, 'index'])
     ->name('sujestoesadm.transformar')
     ->middleware(['auth',]); // Adicione os middlewares necessários
 
+    Route::get('/sujestoes-postadas',               [PrincipalController::class, 'sujestaopostada']) ->name('sujestaoPostada');
+
+
+    Route::post('/vizualizar/{id}',  [AdminController::class, 'postararsujestao'])
+    ->name('artigos.update')
+    ->middleware('auth');
 
 
 

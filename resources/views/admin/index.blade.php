@@ -10,29 +10,33 @@
     <nav id="sidebar" class="bg-dark sidebar">
         <!-- Botão Voltar no menu lateral -->
         <ul>
-            <li>
+        <li>
               
-            </li>
-            <li>
-                <a href="{{ route('admin.showUsers') }}">
-                    <button class="btn btn-sm btn-secondary">Usuarios</button>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.artigosRemovidos') }}">
-                    <button class="btn btn-sm btn-secondary">Postar Artigos</button>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('admin.artigos') }}">
-                    <button class="btn btn-sm btn-secondary">Artigos</button>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('sujestoesadm.sujestoes') }}">
-                    <button class="btn btn-sm btn-secondary">Sujestões</button>
-                </a>
-            </li>
+              </li>
+            
+              <li>
+                  <a href="{{ route('admin.artigosRemovidos') }}">
+                      <button class="btn btn-sm btn-secondary">Postar Artigos</button>
+                  </a>
+              </li>
+              @if(auth()->user()->funcao != 'editor')
+              <li>
+                  <a href="{{ route('admin.showUsers') }}">
+                      <button class="btn btn-sm btn-secondary">Usuarios</button>
+                  </a>
+              </li>
+            
+              <li>
+                  <a href="{{ route('admin.artigos') }}">
+                      <button class="btn btn-sm btn-secondary">Artigos</button>
+                  </a>
+              </li>
+              @endif
+              <li>
+                  <a href="{{ route('sujestoesadm.sujestoes') }}">
+                      <button class="btn btn-sm btn-secondary">Sujestões</button>
+                  </a>
+              </li>
         
             
             
