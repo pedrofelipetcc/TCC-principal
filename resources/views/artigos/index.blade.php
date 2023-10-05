@@ -50,9 +50,10 @@
                     <a href="{{ route('artigos.create') }}">
                         <button class="btn btn-sm btn-secondary">Novo artigo</button>
                     </a>
-                    <a href="{{ route('principal') }}">
-                    <button class="btn btn-sm btn-secondary">Pagina Inicial</button>
-                </a>
+                    
+                    <button class="btn btn-sm btn-secondary" onclick="window.history.back()">Voltar</button>
+
+    
                         <thead>
                         <tr>
                             <th scope="col">id</th>

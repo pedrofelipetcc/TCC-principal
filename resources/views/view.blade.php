@@ -86,8 +86,9 @@ main {
       <div class="col-md-6">
         <div class="card-body">
           
-          <div class="introducao">{{ $artigo->introducao }}</div>
-          <div class="conteudo">{{ $artigo->conteudo }}</div>
+        
+        <div class="introducao">{!! $artigo->introducao !!}</div>
+<div class="conteudo">{!! $artigo->conteudo !!}</div>
         </div>
       </div>
     </div>

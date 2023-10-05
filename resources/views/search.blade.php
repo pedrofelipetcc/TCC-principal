@@ -36,7 +36,8 @@
                             <div class="card-body">
                             <div class="titulo">{{ $artigo->titulo }}</div>
                             </a>
-        <div class="introducao">{{ $artigo->introducao }}</div>                            </div>
+        <div class="introducao">{!! $artigo->introducao !!}</div>          
+                        </div>
                         </div>
                     </div>
                 </div>

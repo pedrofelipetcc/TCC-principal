@@ -58,30 +58,34 @@
                             <th scope="col">Introdução</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Postado</th>
-                            <th width="160">Ações</th>
+                            
                             
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($artigos as $artigo)
                     <tr>
+
                         <td>{{ $artigo->id }}</td>
                         <td>{{ $artigo->titulo }}</td>
                         <td>{{ $artigo->introducao }}</td>
                         <td>{{ $artigo->autor_id }}</td>
                         <td>{{ $artigo->postado }}</td>
                         <td>
+                        </tr>
                         <form action="{{ route('admin.deleteartigos', ['id' => $artigo->id]) }}" method="post">
                         
     @csrf
     <button type="submit" class="btn btn-danger">Remover</button>
 </form>
 
+
 <table class="table">
                    
                     <a href="{{ route('admin.editartigo', ['id' => $artigo->id]) }}">
                     <button class="btn btn-sm btn-secondary">Editar </button>
                 </a>
+                
 
 
  <!-- Coloque aqui os botões de ação (editar, excluir, etc.) -->

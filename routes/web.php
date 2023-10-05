@@ -59,6 +59,10 @@ Route::get('/admin', [AdminController::class, 'index'])
     ->name('admin.index')
     ->middleware(['auth', 'admin.access']); // Adicione os middlewares necessários
 
+    Route::get('/pag2', [AdminController::class, 'pag2'])
+    ->name('admin.pag2')
+    ; // Adicione os middlewares necessários
+
 
 
 

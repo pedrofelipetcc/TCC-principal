@@ -82,8 +82,8 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $artigo->titulo }}</h5>
-                        <p class="card-text">{{ $artigo->introducao }}</p>
+                    <h5 class="card-title">{{ $artigo->titulo }}</h5>
+<p class="card-text">{!! $artigo->introducao !!}</p>
                         <p class="card-text">
                             <small class="text-muted">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">

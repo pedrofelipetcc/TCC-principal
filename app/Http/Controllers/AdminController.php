@@ -15,6 +15,11 @@ class AdminController extends Controller
         
         return view('admin.index');
     }
+    public function pag2()
+    {
+        
+        return view('admin.pag2');
+    }
 
     public function sujestao()
     {

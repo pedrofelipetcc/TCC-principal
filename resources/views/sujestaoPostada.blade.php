@@ -52,9 +52,9 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h3 class="card-title">{{ $sujestao->titulo }}</h3>
-                        <p class="card-text">{{ $sujestao->introducao }}</p>
-                        <p class="card-text"> {{ $sujestao->conteudo }}  </p>
+                        <h3 class="card-title">{!! $sujestao->titulo !!}</h3>
+                        <p class="card-text">{!! $sujestao->introducao !!}</p>
+                        <p class="card-text"> {!! $sujestao->conteudo !!}  </p>
                       
                         <p class="card-text"> {{ $sujestao->autor }}  </p>
 
