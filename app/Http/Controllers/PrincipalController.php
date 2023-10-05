@@ -49,7 +49,7 @@ class PrincipalController extends Controller
     public function gremio()
     {
         $artigos = Artigo::where('postado', 1)
-                          ->where('conteudo', 'like', '%grêmio%',) // Adicione essa condição
+                          ->where('conteudo', 'like', '%Gr&ecirc;mio%',) // Adicione essa condição
                           ->get();
     
         return view('gremio', compact('artigos'));
