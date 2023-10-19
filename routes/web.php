@@ -22,6 +22,12 @@ use App\Http\Controllers\SujestaoController;
 
 Route::get('/', [PrincipalController::class, 'index']) ->name('principal');
 
+
+
+
+
+
+
 Route::get('/view/{id}', [PrincipalController::class, 'view'])->name('view');
 
 Route::get('/gremio', [PrincipalController::class, 'gremio']) ->name('gremio');
@@ -84,9 +90,17 @@ Route::get('/admin', [AdminController::class, 'index'])
     Route::get('/sujestoes-postadas',               [PrincipalController::class, 'sujestaopostada']) ->name('sujestaoPostada');
 
 
-    Route::post('/vizualizar/{id}',  [AdminController::class, 'postararsujestao'])
-    ->name('artigos.update')
+  
+    
+    Route::post('/vizualizar/{id}',  [AdminController::class, 'removersujestao'])
+    ->name('sujestao.remover')
     ->middleware('auth');
+
+    
+    Route::post('/vizualizar/{id}',  [AdminController::class, 'removersujestao'])
+    ->name('sujestao.postar')
+    ->middleware('auth');
+    
 
 
 

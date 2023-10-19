@@ -3,9 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Mural Jornalístico teste</title>
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+  <title>Mural Jornalístico </title>
   <link rel="dns-prefetch" href="//fonts.bunny.net">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
   <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
@@ -23,29 +24,80 @@
     display: block; /* Isso remove quaisquer espaços em branco adicionais abaixo da imagem */
   }
 }
+
+.custom-width {
+    width: 200%; /* Ajuste a largura conforme necessário */
+}
 </style>
+
 </head>
 <body>
-  
 <header>
   <h1>Mural Jornalistico</h1>
  
-  <nav>
 
+<nav >
+
+<form class="form-inline border-0 bg-transparent" action="{{ route('search') }}" method="get">
+    @csrf
+    <div class="search row w-100">
+        <div class="col-md-8 col-sm-12 pr-0 d-flex">
+            <div class="w-100">
+                <input type="text" placeholder="Pesquisar notícias..." name="query" class="search-input m-0 form-control custom-width" style="width: 100%">
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 pl-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+  <button class="btn-round" onclick="toggleMenu()">☰</button>
+ 
+  <div class="menu" id="menu">
+  @if (auth()->check())
+      <?php
+      // Supondo que $user->funcao contém a função do usuário
+      if (auth()->user()->funcao === 'admin' || auth()->user()->funcao === 'editor') {
+        echo '<a href="' . route('admin.index') . '" class="menu-item">Painel de Administração</a>';
+      }
+       elseif (auth()->user()->funcao === 'escritor') {
+        echo '<a href="' . route('artigos.index') . '" class="menu-item">Artigos</a>';
+      } elseif (auth()->user()->funcao === 'leitor') {
+        echo '<a href="' . route('principal') . '" class="menu-item">Página Principal</a>';
+      }
+      ?>
+    @else
+  <a href="{{ route('login') }}" class="menu-item">Login</a>
+@endauth
+    <div class="menu-item" onclick="window.location.href = '{{ route('gremio') }}';">Gremio Estudantil</div>
+    <div class="menu-item" onclick="window.location.href = '{{ route('sujestao.sujestao') }}';">Deixe sua Sugestão</div>	
+    <div class="menu-item" onclick="window.location.href = '{{ route('sujestaoPostada') }}';"> Sugestões Postadas</div>	
+    
+
+
+  </div>
+</nav>
+
+</header>
+
+    
   
-
-  <div class="search row">
-  <div class="col-md-8 col-sm-12"> <!-- Adicione colunas responsivas -->
-    <input type="text" placeholder="Pesquisar notícias..." name="query" class="search-input m-0 form-control">
-  </div>
-  <div class="col-md-4 col-sm-12"> <!-- Adicione colunas responsivas -->
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-  </div>
-</div>
+ 
 
 
 
-    <button class="btn-round" onclick="toggleMenu()">☰</button>
    
     <div class="menu" id="menu">
     @if (auth()->check())

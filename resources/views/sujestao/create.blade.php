@@ -157,6 +157,7 @@ nav li {
     </header>
 
     <main>
+      
     <div class="form-container">
     <form action="{{ route('sujestao.store') }}" class="mt-3" method="POST">
                 @csrf
@@ -164,39 +165,44 @@ nav li {
                     <input type="text" class="form-control" name="titulo" id="titulo" placeholder="" >
                     <label for="floatingInput">Título do artigo</label>
                 </div>
+
                 <div class="form-floating mb-3">
-    <label for="floatingInput">Introdução</label>
-        <textarea class="form-control" name="introducao" id="introducao" rows="6" placeholder=""></textarea>
-       
-    </div>
+                    <input type="text" class="form-control" name="introducao" id="introducao"  rows="6" placeholder="" >
+                    <label for="floatingInput">Introdução do artigo</label>
+                </div>
 
-    <div class="form-floating mb-3">
-    <label for="floatingInput">Conteúdo</label>
-        <textarea class="form-control" name="conteudo" id="conteudo" rows="10" placeholder=""></textarea>
-        
-    </div>
-    <div class="form-floating mb-3">                 
-           <label for="floatingInput">URL da imagem</label>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="conteudo" id="conteudo"  rows="10" placeholder="" >
+                    <label for="floatingInput">Conteúdo do artigo</label>
+                </div>
+               
+               
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="imagem_url" id="imagem_url"  placeholder="" >
+                    <label for="floatingInput">URL da imagem</label>
+                </div>
+               
+               
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="autor" id="autor"  placeholder="" >
+                    <label for="floatingInput">Nome</label>
+                </div>
 
-        <input type="text" class="form-control" name="imagem_url" id="imagem_url" placeholder="" >
-    </div>
-    <div class="form-floating mb-3">
-    <label for="floatingInput">Nome</label>
-        <textarea class="form-control" name="autor" id="autor" rows="10" placeholder=""></textarea>
-        
-    </div>
-    <div class="form-floating mb-3">
-    <label for="floatingInput">Email</label>
-        <textarea class="form-control" name="emailautor" id="emailautor" rows="10" placeholder=""></textarea>
-        
-    </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="emailautor" id="emailautor"  placeholder="" >
+                    <label for="floatingInput">Email</label>
+                </div>
+
+   
+    
+   
 
     
                 <!-- Rest of the form elements -->
                 <input type="submit" class="btn btn-primary" value="Enviar" />
             </form>
             </div>
-
+            
     </main>
     <script>
       // Seleciona o botão e o menu

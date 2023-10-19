@@ -11,14 +11,13 @@
 
     <!-- Fonts -->
     <style>
-    
-    navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* Garante que o nav ocupe toda a largura */}
-  
-  </style>
+        navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,7 +28,8 @@
 <body>
     <div id="app">
         
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+       
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Mural Jornalistico Administração') }}
@@ -60,6 +60,36 @@
                                 </li>
                             @endif
                         @else
+                            @if(Route::is('admin.index'))
+                                <li>
+                                    <a href="{{ route('admin.artigosRemovidos') }}">
+                                        <button class="btn btn-sm btn-secondary">Postar Artigos</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('artigos.index') }}">
+                                        <button class="btn btn-sm btn-secondary">Criar Artigos</button>
+                                    </a>
+                                </li>
+                                @if(auth()->user()->funcao != 'editor')
+                                    <li>
+                                        <a href="{{ route('admin.showUsers') }}">
+                                            <button class="btn btn-sm btn-secondary">Usuarios</button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.artigos') }}">
+                                            <button class="btn btn-sm btn-secondary">Artigos</button>
+                                        </a>
+                                    </li>
+                                @endif
+                                <li>
+                                    <a href="{{ route('sujestoesadm.sujestoes') }}">
+                                        <button class="btn btn-sm btn-secondary">Sugestões</button>
+                                    </a>
+                                </li>
+                            @endif
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -12,8 +12,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        
-        return view('admin.index');
+        $artigos = Artigo::all();
+        return view('admin.index', compact('artigos'));
     }
     public function pag2()
     {
@@ -121,17 +121,28 @@ public function edit($id)
 
 
 
-
 public function postararsujestao($id)
 {
-    $artigo = Artigo::find($id);
+    $sujestoes = Sujestao::find($id);
 
-    if ($artigo) {
-        $artigo->update(['postado' => 1]);
-        return redirect()->back()->with('success', 'Artigo marcado como  postado com sucesso.');
+    if ($sujestoes) {
+        $sujestoes->update(['postado' => 1]);
+        return redirect()->back()->with('success', 'Sujestao marcado como  postado com sucesso.');
     }
 
-    return redirect()->back()->with('error', 'Artigo não encontrado.');
+    return redirect()->back()->with('error', 'Sujestao não encontrado.');
+}
+
+public function removersujestao($id)
+{
+    $sujestoes = Sujestao::find($id);
+
+    if ($sujestoes) {
+        $sujestoes->update(['postado' => 0]);
+        return redirect()->back()->with('success', 'Sujestao marcado como não postado com sucesso.');
+    }
+
+    return redirect()->back()->with('error', 'Sujestao não encontrado.');
 }
 
 

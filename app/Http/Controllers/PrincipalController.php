@@ -12,6 +12,22 @@ use Illuminate\Http\Request;
 
 class PrincipalController extends Controller
 {
+ 
+    public function teste()
+    {
+        $artigos = Artigo::where('postado', 1)
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+        return view('template.index', compact('artigos'));
+    }
+  
+    public function pesquisa()
+    {
+
+        return view('template.pesquisa');
+    }
+
     public function index()
     {
         $artigos = Artigo::where('postado', 1)
@@ -30,6 +46,8 @@ class PrincipalController extends Controller
         return view('view', compact('artigo'));
     }
 
+   
+   
     public function search(Request $request)
     {
         $query = $request->input('query');

@@ -1,0 +1,37 @@
+/* CSS para a página de pesquisa */
+body {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+}
+
+.container {
+    background-color: #f5f5f5; /* Fundo cinza claro */
+}
+
+h1 {
+    color: #000; /* Título preto */
+}
+
+form label {
+    color: #000; /* Texto preto */
+}
+
+form input,
+form textarea {
+    border-color: #ccc; /* Borda cinza claro */
+}
+
+form button {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+}
+
+form button:hover {
+    background-color: #3e8e41; /* Fundo verde escuro ao passar o mouse */
+}
+
+#mensagem {
+    background-color: #f2dede; /* Fundo vermelho claro para mensagens de erro */
+    border-color: #ebccd1; /* Borda vermelha */
+    color: #a94442; /* Texto vermelho escuro */
+}

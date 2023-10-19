@@ -31,6 +31,14 @@
             <label for="titulo">Título:</label>
             <input type="text" class="form-control" id="titulo" name="titulo" value="{{ $artigo->titulo }}">
         </div>
+       
+       
+        <div class="form-group">
+            <label for="conteudo">Introdução:</label>
+            <textarea class="form-control" id="introducao" name="introducao">{{ $artigo->introducao }}</textarea>
+        </div>
+
+
         <div class="form-group">
             <label for="conteudo">Conteúdo:</label>
             <textarea class="form-control" id="conteudo" name="conteudo">{{ $artigo->conteudo }}</textarea>

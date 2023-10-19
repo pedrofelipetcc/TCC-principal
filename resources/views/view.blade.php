@@ -68,7 +68,7 @@ main {
     <ul class="list-unstyled">
       <li>
         <a href="{{ route('principal') }}">
-          <button class="btn btn-sm btn-secondary">Voltar</button>
+        <button class="btn btn-sm btn-secondary" onclick="window.history.back()">Voltar</button>
         </a>
       </li>
     </ul>
@@ -76,7 +76,7 @@ main {
 
 </header>
 <main role="main" class="container">
-  <div class="card">
+  
     <div class="row">
       <div class="col-md-6"><div class="titulo">{{ $artigo->titulo }}</div>
         <div class="imagem">
@@ -92,7 +92,7 @@ main {
         </div>
       </div>
     </div>
-  </div>
+ 
 </main>
 
 <script>

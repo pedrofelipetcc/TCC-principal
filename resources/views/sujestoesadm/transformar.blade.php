@@ -18,6 +18,9 @@
     
 </head>
 <body>
+<a href="{{ route('admin.index') }}">
+                        <button class="btn btn-sm btn-secondary mb-3">Voltar</button>
+                    </a>
 <form method="post">
 @csrf
 <div class="container">
@@ -41,12 +44,15 @@
         <strong>Email do Autor:</strong>
         <div>{{ $sujestoes->emailautor }}</div>
     </div>
+  
 </div>
 
 
-    
-    <button type="submit" class="btn btn-danger">Postar</button>
+
+
     </form>
+    <button type="submit" class="btn btn-danger" formaction="{{ route('sujestao.postar', ['id' => $sujestoes->id]) }}">Postar</button>
+
     
 @endsection
 </body>

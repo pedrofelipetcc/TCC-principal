@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body style="background-color: #f0f8ff;">
-@section('content')
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -25,7 +23,7 @@
             </div>
         </div>
     </div>
-@endsection
+
 
     <!-- Adicione os scripts do Bootstrap 5 aqui (jQuery e Popper.js) -->
 
